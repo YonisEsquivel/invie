@@ -459,6 +459,8 @@ body{
 .menu{
   font-size: 24px;
   display: inline-block;
+  position: absolute;
+  right: 0;
 }
 
 .menu li{
@@ -466,18 +468,50 @@ body{
   margin-left: 30px;
 }
 
-.guitarras{
+.guitarras {
   color: #1F313C;
 }
 
-.logotipo{
+.logotipo {
   display: inline-block;
 }
 
-.contenedor{
+.contenedor {
   max-width: 800px;
   margin: auto;
 }
 
+.guitarra {
+  margin: 10px;
+  padding: 10px;
+  /*overflow: hidden;*/
+  border: 1px solid #1F313C;
+}
 
+.guitarra ol {
+  padding: 0;
+}
+
+.derecha {
+  float: right;
+  position: relative;
+  top: -77px;
+}
+
+.izquierda {
+  float: left;
+  position: relative;
+  top: 80px;
+}
+
+.contenedor-guitarra-a{
+  margin-left: 20px;
+}
+.contenedor-guitarra-b {
+  margin-left: 370px;
+}
+
+.header{
+  position: relative;
+}
 
