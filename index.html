@@ -7,29 +7,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header id="header" class="header contenedor"> <!-- Header -->
-    <figure class="logotipo"><!-- Logotipo -->
-      <img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
-    </figure>
-    <nav class="menu"><!-- menu -->
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#guitarras">Guitarras</a></li>
-        <li><a href="precios.html">Precios</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section id="portada" class="portada"><!-- Portada -->
+  <section id="portada" class="portada background"><!-- Portada -->
+    <header id="header" class="header contenedor"> <!-- Header -->
+      <figure class="logotipo"><!-- Logotipo -->
+        <img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
+      </figure>
+      <nav class="menu"><!-- menu -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#guitarras">Guitarras</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="contenedor">
-      <h1 class="titulo">Guitarras inviesibles</h1><!-- Titulo -->
+      <h1 class="titulo">Guitarras <span>invie</span>sibles</h1><!-- Titulo -->
       <h3 class="titulo-a">Sé la estrella de rock que siempre quisiste ser.</h3>
-      <button class="button">Conoce más</button>      
+      <a class="button" href="#guitarras">Conoce más</a>      
     </div>
   </section>
   <section id="guitarras" class="guitarras contenedor"><!-- Guitarras -->
     <h2>Nuestras guitarras</h2>
     <article class="guitarra"><!-- Guitarra 1 -->
-      <img class="derecha" src="images/invie-acustica.png" width="300" alt="">
+      <img class="derecha" src="images/invie-acustica.png" width="350" alt="">
       <div class="contenedor-guitarra-a">
         <h3 class="titulo-b">Invie Acústica</h3>
         <ol>
@@ -39,8 +39,8 @@
         </ol>        
       </div>
     </article>
-    <article class="guitarra"><!-- Guitarra 2 -->
-      <img class="izquierda" src="images/invie-classic.png" width="300" alt="">
+    <article class="guitarra b"><!-- Guitarra 2 -->
+      <img class="izquierda" src="images/invie-classic.png" width="350" alt="">
       <div class="contenedor-guitarra-b">
       <h3 class="titulo-b">Invie Classic</h3>
         <ol>
@@ -82,7 +82,7 @@
             <label for="comentarios">
               <input type="checkbox" id="comentarios" name="intereses" value="comentarios"> Comentarios
             </label> 
-            <label for="comentarios">
+            <label for="otros">
               <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
             </label>            
           </div>
