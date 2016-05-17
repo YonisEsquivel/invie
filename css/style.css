@@ -620,7 +620,7 @@ input:focus, textarea:focus {
 
 .formulario{
   display: flex;
-  width: 470px;
+  width: 500px;
   color: white;
 }
 
@@ -658,4 +658,50 @@ input:focus, textarea:focus {
 
 .table {
   margin: 50px 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  .titulo {
+    font-size: 45px;
+    margin-top: 30px;
+  }
+  .titulo-a {
+    font-size: 18px;
+  }
+
+  .portada {
+    height: auto;
+  }
+
+  .portada .button {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  /* guitarras */
+
+  .guitarras {
+    text-align: center;
+  }
+
+  .izquierda, .derecha {
+    float: none;
+    position: static;
+  }
+
+  .titulo-b {
+    margin: 0;
+  }
+  .guitarra li {
+    list-style: none;
+  }
+
+  .guitarra.b {
+    height: auto;
+  }
+  .contenedor-guitarra-b {
+    position: static;
+    margin: 0;
+  }
 }
