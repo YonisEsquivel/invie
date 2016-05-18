@@ -674,7 +674,7 @@ input:focus, textarea:focus {
   left: 20px;
   top: 20px;
   z-index: 3;
-
+  color: white;
 }
 
 
@@ -761,6 +761,15 @@ input:focus, textarea:focus {
   input[type="checkbox"] {
     zoom: 1.5;
   }
+
+  /* precio */
+  .table {
+    margin: 50px 20px;
+  }
+  .table .contenedor {
+    overflow: auto;
+    border: 1px solid #273B47;
+  }
 }
 
 @media screen and (max-width: 650px){
@@ -783,14 +792,19 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 510px){
+  .header {
+    position: static;
+  }
+  .header .contenedor {
+    position: static;
+  }
   .portada .contenedor {
     position: static;
   }
   .menu {
-    border: 1px solid red;
     background-color: rgba(255, 60, 88, 0.8);
     position: absolute;
-    left: -100%;
+    left: -101%;
     top: 0;
     z-index: 2;
     bottom: 0;

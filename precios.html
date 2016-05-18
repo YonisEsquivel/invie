@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Precios de las guitarras del futuro</title>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400, 700|Allerta' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/style.css">	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 	<body>
   	<header id="header" class="header background"> <!-- Header -->
@@ -12,7 +14,8 @@
 		    <figure class="logotipo"><!-- Logotipo -->
 		      <img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
 		    </figure>
-		    <nav class="menu"><!-- menu -->
+        <span class="burguer-button fa fa-bars" aria-hidden="true" id="burguer-button"></span>
+		    <nav class="menu" id="menu"><!-- menu -->
 		      <ul>
 		        <li><a href="index.html">Home</a></li>
 		        <li><a href="index.html#guitarras">Guitarras</a></li>
@@ -95,5 +98,31 @@
       </form>
     </div>
   </footer>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+  <script>
+    var consulta = window.matchMedia('(max-width: 510px)');
+    consulta.addListener(mediaQuery);
+    var $burguerButton = document.getElementById('burguer-button');
+    var $menu = document.getElementById('menu');
+    function toggleMenu() {
+          $menu.classList.toggle('active')
+        }
+
+    function mediaQuery(){
+      if (consulta.matches) {
+        console.log('Condición OK');
+        $burguerButton.addEventListener('touchstart', toggleMenu);
+
+      } else {
+        console.log('Condición NO');
+
+      }      
+    }
+    mediaQuery();
+
+    var bLazy = new Blazy({
+      selector: 'img'
+    });    
+  </script>
 	</body>
 </html>
