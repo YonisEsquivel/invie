@@ -102,6 +102,7 @@
     </div>
   </footer>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script>
     var consulta = window.matchMedia('(max-width: 510px)');
     consulta.addListener(mediaQuery);
@@ -110,6 +111,13 @@
     function toggleMenu() {
           $menu.classList.toggle('active')
         }
+
+    function showmenu() {
+      $menu.classList.add('active')
+    }
+    function hidemenu() {
+      $menu.classList.remove('active')
+    }
 
     function mediaQuery(){
       if (consulta.matches) {
@@ -123,9 +131,16 @@
     }
     mediaQuery();
 
+    // Lazy Loading
     var bLazy = new Blazy({
       selector: 'img'
-    });    
+    });   
+
+    // Hammer.js - Gestos touch
+    var $body = document.body;
+    var gestos = new Hammer($body);
+    gestos.on('swipeleft', hidemenu);
+    gestos.on('swiperight', showmenu);
   </script>
 </body>
 </html>
