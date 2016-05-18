@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Invie - Las guitarras del futuro</title>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400, 700|Allerta' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <section id="portada" class="portada background"><!-- Portada -->
@@ -12,7 +14,8 @@
       <figure class="logotipo"><!-- Logotipo -->
         <img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
       </figure>
-      <nav class="menu"><!-- menu -->
+      <span class="burguer-button fa fa-bars" aria-hidden="true" id="burguer-button"></span>
+      <nav class="menu" id="menu"><!-- menu -->
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="#guitarras">Guitarras</a></li>
@@ -95,5 +98,13 @@
       </form>
     </div>
   </footer>
+  <script>
+    var $burguerButton = document.getElementById('burguer-button');
+    var $menu = document.getElementById('menu');
+    $burguerButton.addEventListener('touchstart', toggleMenu);
+    function toggleMenu() {
+      $menu.classList.toggle('active')
+    }
+  </script>
 </body>
 </html>
